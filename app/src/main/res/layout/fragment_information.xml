@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gmail.jamgrorg.teacherorganizer.fragments.FragmentInformation"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoNotesScrollView"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/infoNotesTitle"
+            android:id="@+id/infoNotesTitle"
+            android:textSize="14sp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.DropDownHint" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoNotesList" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/infoTTOCTitle"
+            android:id="@+id/infoTTOCTitle"
+            android:textSize="14sp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.DropDownHint" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infoTTOCList" />
+    </LinearLayout>
+
+</LinearLayout>

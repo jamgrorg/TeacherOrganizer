@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailCatalogDialogActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:padding="8dp"
+    android:minWidth="300dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:id="@+id/new_catalog_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/new_catalog_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/detail_lesson_type_title_text">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_catalog_title_field"
+                    android:inputType="textAutoCorrect"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:id="@+id/new_catalog_student_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_catalog_group_field"
+                    android:hint="@string/new_catalog_group_title"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/new_catalog_sname_field"
+                    android:singleLine="true"
+                    android:hint="@string/new_catalog_sname_title"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_catalog_fname_field"
+                    android:singleLine="true"
+                    android:inputType="textPersonName"
+                    android:hint="@string/new_catalog_fname_title"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/new_catalog_surname_field"
+                    android:singleLine="true"
+                    android:hint="@string/new_catalog_surname_title"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:weightSum="1">
+
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/new_catalog_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/primary_text_light"
+            android:text="@string/cancel_button_title"
+            android:textSize="16sp"
+            custom:pb_colorNormal="@color/md_blue_grey_100"
+            custom:pb_colorPressed="@color/md_red_500"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="0.5"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="4dp" />
+
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/new_catalog_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/primary_text_light"
+            android:text="@string/save_button_title"
+            android:textSize="16sp"
+            custom:pb_colorNormal="@color/md_blue_grey_100"
+            custom:pb_colorPressed="@color/md_green_500"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

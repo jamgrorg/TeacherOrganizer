@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".importExportUtils.ImportExportDialogActivity"
+    android:orientation="vertical"
+    android:minWidth="300dp"
+    android:padding="8dp"
+    android:id="@+id/import_export_view">
+
+    <RadioGroup
+        android:id="@+id/import_export_catalog_type_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_management_lesson_type_button_text"
+            android:id="@+id/import_export_lesson_type_radiobutton"
+            android:checked="false"
+            android:textSize="16sp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_management_subjects_button_text"
+            android:id="@+id/import_export_subjects_radiobutton"
+            android:checked="false"
+            android:textSize="16sp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_management_groups_and_students_button_text"
+            android:id="@+id/import_export_groups_and_students_radiobutton"
+            android:checked="false"
+            android:textSize="16sp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="@color/md_teal_500">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/import_export_file_name_field"
+                android:hint="@string/export_field_title" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/import_export_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="@string/export_button_text"
+        android:textSize="16sp"
+        custom:pb_colorComplete="@color/colorSuccess"
+        custom:pb_colorNormal="@color/colorPrimary"
+        custom:pb_colorPressed="@color/colorPrimaryDark"
+        custom:pb_colorError="@color/colorError"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat" />
+
+</LinearLayout>

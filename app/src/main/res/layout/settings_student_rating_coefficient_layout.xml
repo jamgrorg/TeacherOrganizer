@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/md_teal_500">
+
+            <EditText
+                android:id="@+id/settings_student_rating_coefficient_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/settings_student_rating_coefficient_title"
+                android:textColorHint="@color/md_teal_500"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                android:numeric="decimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/settings_student_rating_coefficient_cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/primary_text_light"
+                android:text="@string/cancel_button_title"
+                android:textSize="16sp"
+                custom:pb_colorNormal="@color/md_blue_grey_100"
+                custom:pb_colorPressed="@color/md_red_500"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="0.5"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="4dp"/>
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/settings_student_rating_coefficient_save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/primary_text_light"
+                android:text="@string/save_button_title"
+                android:textSize="16sp"
+                custom:pb_colorNormal="@color/md_blue_grey_100"
+                custom:pb_colorPressed="@color/md_green_500"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

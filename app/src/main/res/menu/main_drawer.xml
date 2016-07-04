@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_information_outline_black_48dp"
+            android:title="@string/nav_info" />
+
+        <item
+            android:id="@+id/nav_notebook"
+            android:icon="@drawable/ic_notebook_black_48dp"
+            android:title="@string/nav_notebook" />
+        <item
+            android:id="@+id/nav_journal"
+            android:icon="@drawable/ic_journal_black_48dp"
+            android:title="@string/nav_journal" />
+        <item
+            android:id="@+id/nav_timetable_of_classes"
+            android:icon="@drawable/ic_timetable_of_classes_black_48dp"
+            android:title="@string/nav_timetable_of_classes" />
+    </group>
+
+    <item android:title="@string/nav_settings_title">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_48dp"
+                android:title="@string/nav_settings" />
+            <item
+                android:id="@+id/nav_data_management"
+                android:icon="@drawable/ic_data_management_black_48dp"
+                android:title="@string/nav_data_management" />
+        </menu>
+    </item>
+
+</menu>

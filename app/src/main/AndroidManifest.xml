@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gmail.jamgrorg.teacherorganizer">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailNoteDialogActivity"
+            android:label="@string/title_activity_new_note"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".DetailTTOCDialogActivity"
+            android:label="@string/new_ttoc"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <service
+            android:name=".notificationUtils.AlarmService"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".notificationUtils.NotificationReceiver"
+            android:process=":remote" />
+
+        <activity
+            android:name=".CatalogActivity"
+            android:label="@string/title_activity_lesson_type_catalog"
+            android:parentActivityName=".DataManagementActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.jamgrorg.teacherorganizer.DataManagementActivity" />
+        </activity>
+
+        <activity
+            android:name=".DetailCatalogDialogActivity"
+            android:label="@string/new_record_title"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".CatalogSelectionActivity"
+            android:label="@string/detail_lesson_type_title_text"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".CatalogStudentsActivity"
+            android:label="@string/title_activity_students_catalog"
+            android:parentActivityName=".CatalogActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gmail.jamgrorg.teacherorganizer.CatalogActivity" />
+        </activity>
+        <activity
+            android:name=".importExportUtils.ImportExportDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailJournalActivity"
+            android:label="@string/title_activity_journal_detail" >
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:label="@string/nav_settings_title"/>
+        <activity android:name=".DataManagementActivity"
+            android:label="@string/nav_data_management"/>
+    </application>
+
+</manifest>
