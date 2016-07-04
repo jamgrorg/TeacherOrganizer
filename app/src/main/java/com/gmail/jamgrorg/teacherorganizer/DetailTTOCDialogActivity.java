@@ -12,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.gmail.jamgrorg.teacherorganizer.fragments.FragmentTimetable_of_classes;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
@@ -44,8 +45,6 @@ public class DetailTTOCDialogActivity extends AppCompatActivity implements com.w
     private static final boolean[] validFields = {false, false, false, false, false, false};
     private static CheckBox newTTOCRepeatCheckbox;
     private static LinearLayout newTTOCRepeatLayout;
-    private static RadioButton newTTOCWeeklyRadioButton;
-    private static RadioButton newTTOCByDaysRadioButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +76,6 @@ public class DetailTTOCDialogActivity extends AppCompatActivity implements com.w
         Button newTTOCCancelButton = (Button) findViewById(R.id.new_ttoc_cancel_buton);
         newTTOCRepeatCheckbox = (CheckBox) findViewById(R.id.new_ttoc_repeat_checkbox);
         newTTOCRepeatLayout = (LinearLayout) findViewById(R.id.new_ttoc_repeat_layout);
-        newTTOCWeeklyRadioButton = (RadioButton) findViewById(R.id.new_ttoc_repeat_weekly_radiobutton);
-        newTTOCByDaysRadioButton = (RadioButton) findViewById(R.id.new_ttoc_repeat_by_days_radiobutton);
 
         newTTOCDateField.setKeyListener(null);
         newTTOCStartTimeField.setKeyListener(null);
@@ -221,6 +218,7 @@ public class DetailTTOCDialogActivity extends AppCompatActivity implements com.w
                             newTTOCSubjectField.getText().toString().trim(),
                             newTTOCGroupField.getText().toString().trim(),
                             newTTOCLessonHallField.getText().toString().trim());
+
                 } else { // Если редактируется существующая заметка
                     MainActivity.databaseHelper.updateTTOCRecord(id,
                             newTTOCDateField.getText().toString().trim(),

@@ -231,7 +231,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="visible">
 
                 <CheckBox
                     android:layout_width="wrap_content"
@@ -244,7 +245,7 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:id="@+id/new_ttoc_repeat_layout">
 
                     <RadioGroup
