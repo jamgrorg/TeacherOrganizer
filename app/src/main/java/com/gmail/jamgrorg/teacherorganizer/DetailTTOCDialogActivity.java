@@ -11,13 +11,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.gmail.jamgrorg.teacherorganizer.fragments.FragmentTimetable_of_classes;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.StringTokenizer;
 
 public class DetailTTOCDialogActivity extends AppCompatActivity implements com.wdullaer.materialdatetimepicker.time.TimePickerDialog.OnTimeSetListener {
 
@@ -91,6 +94,14 @@ public class DetailTTOCDialogActivity extends AppCompatActivity implements com.w
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     newTTOCRepeatLayout.setVisibility(View.VISIBLE);
+                    Calendar calendar = Calendar.getInstance();
+                    try {
+                        calendar.setTime(new SimpleDateFormat("dd.MM.yyyy").parse(date));
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(getApplication(), String.valueOf(new SimpleDateFormat("dd.MM.yyyy").format(calendar.getTime())),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplication(), String.valueOf(calendar.get(Calendar.WEEK_OF_MONTH)), Toast.LENGTH_SHORT).show();
                 } else {
                     newTTOCRepeatLayout.setVisibility(View.GONE);
                 }
