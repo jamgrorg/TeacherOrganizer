@@ -11,8 +11,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.Toast;
 
 import com.gmail.jamgrorg.teacherorganizer.fragments.FragmentTimetable_of_classes;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
